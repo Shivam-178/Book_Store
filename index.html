@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BookBazaar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="navbar">
+    <div class="nav-left"><h1 class="logo">📖 BookBazaar</h1></div>
+    <nav class="nav-center">
+      <a href="#" class="nav-link" onclick="showWelcome()">Home</a>
+      <a href="#" class="nav-link" onclick="showCategory()">Category</a>
+      <a href="#" class="nav-link" onclick="showContact()">Contact</a>
+      <a href="#" class="nav-link" onclick="toggleCart()">🛒 Cart</a>
+      <a href="#" class="nav-link" onclick="openLogin()">👤 Profile</a>
+    </nav>
+    <div class="nav-right">
+      <input type="text" id="search" placeholder="Search books..." oninput="displayBooks()" />
+      <button onclick="toggleDarkMode()" class="dark-btn">🌗</button>
+    </div>
+  </header>
+
+  <!-- WELCOME PAGE -->
+  <section id="welcome-page" class="welcome-section">
+    <h2>Welcome to BookBazaar 📚</h2>
+    <p>Your one-stop shop for books across all genres.</p>
+    <button onclick="showBookStore()">Browse Books</button>
+  </section>
+
+  <!-- CATEGORY PAGE -->
+  <section id="category-page" style="display: none; padding: 20px; max-width: 700px; margin: 20px auto; background: var(--card); border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+    <h2>Book Categories</h2>
+    <ul id="category-list" style="cursor: pointer;">
+      <li onclick="filterByCategory('Fiction')">Fiction</li>
+      <li onclick="filterByCategory('Non-Fiction')">Non-Fiction</li>
+      <li onclick="filterByCategory('Romance')">Romance</li>
+      <li onclick="filterByCategory('Mystery')">Mystery</li>
+      <li onclick="filterByCategory('Thriller')">Thriller</li>
+      <li onclick="filterByCategory('Science Fiction')">Science Fiction</li>
+      <li onclick="filterByCategory('Fantasy')">Fantasy</li>
+      <li onclick="filterByCategory('Horror')">Horror</li>
+      <li onclick="filterByCategory('Historical Fiction')">Historical Fiction</li>
+      <li onclick="showBookStore()" style="font-weight:bold; margin-top:10px;">Show All Books</li>
+    </ul>
+  </section>
+
+  <!-- CONTACT PAGE -->
+  <section id="contact-page" style="display: none; padding: 20px; max-width: 700px; margin: 20px auto; background: var(--card); border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+    <h2>Get in Touch</h2>
+    <p>Email: <a href="mailto:bookbazaar@example.com">bookbazaar@example.com</a></p>
+    <p>Phone: 555-555-5555</p>
+    <p>Address: 123 Main St, Anytown, USA</p>
+    <form onsubmit="alert('Thank you for your message!'); return false;">
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" required /><br /><br />
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required /><br /><br />
+      <label for="message">Message:</label><br />
+      <textarea id="message" name="message" rows="5" required></textarea><br /><br />
+      <input type="submit" value="Send" />
+    </form>
+  </section>
+
+  <!-- BOOK STORE -->
+  <main id="book-store" style="display: none;">
+    <div id="book-list" class="book-container"></div>
+  </main>
+
+  <!-- CART -->
+  <div id="cart-modal" class="modal">
+    <div class="modal-content cart-content">
+      <span class="close" onclick="toggleCart()">&times;</span>
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+      <p id="cart-total"></p>
+    </div>
+  </div>
+
+  <!-- LOGIN -->
+  <div id="login-modal" class="modal">
+    <div class="modal-content login-signup">
+      <span class="close" onclick="closeLogin()">&times;</span>
+      <h2>Login</h2>
+      <input type="text" placeholder="Username" />
+      <br />
+      <input type="password" placeholder="Password" />
+      <br />
+      <button>Login</button>
+      <p>
+        Don't have an account? <a href="#" onclick="openSignup()">Sign Up</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- SIGNUP -->
+  <div id="signup-modal" class="modal">
+    <div class="modal-content login-signup">
+      <span class="close" onclick="closeSignup()">&times;</span>
+      <h2>Sign Up</h2>
+      <input type="text" placeholder="Username" />
+      <br />
+      <input type="email" placeholder="Email" />
+      <br />
+      <input type="password" placeholder="Password" />
+      <br />
+      <button>Sign Up</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 BookBazaar. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
