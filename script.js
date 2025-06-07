@@ -1,26 +1,27 @@
 // Book data with categories
 const books = [
-  { title: 'The Forgotten Library', author: 'A. Reynolds', price: 5.75, image: 'https://picsum.photos/200/300?random=1', category: 'Fiction' },
-  { title: 'Whispers in the Wind', author: 'Clara Myles', price: 6.5, image: 'https://picsum.photos/200/300?random=2', category: 'Fiction' },
-  { title: 'Echoes of the Past', author: 'J.T. Simmons', price: 7.25, image: 'https://picsum.photos/200/300?random=3', category: 'Mystery' },
-  { title: 'Midnight on Maple Street', author: 'Nora Blake', price: 8.0, image: 'https://picsum.photos/200/300?random=4', category: 'Fiction' },
-  { title: 'Tales from the Emberlands', author: 'Harlan King', price: 8.75, image: 'https://picsum.photos/200/300?random=5', category: 'Fantasy' },
-  { title: 'The Silent Key', author: 'Eliza Moore', price: 9.5, image: 'https://picsum.photos/200/300?random=6', category: 'Thriller' },
-  { title: 'Chasing the Shadow', author: 'Derek Hunt', price: 10.25, image: 'https://picsum.photos/200/300?random=7', category: 'Horror' },
-  { title: 'The Cipher Room', author: 'Maya Gill', price: 11.0, image: 'https://picsum.photos/200/300?random=8', category: 'Mystery' },
-  { title: 'Deadlock Diaries', author: 'Ryan Park', price: 11.75, image: 'https://picsum.photos/200/300?random=9', category: 'Thriller' },
-  { title: 'The Ninth Clue', author: 'Tasha Quinn', price: 12.5, image: 'https://picsum.photos/200/300?random=10', category: 'Fiction' },
-  { title: 'The Last Starship', author: 'Colin Reiss', price: 13.25, image: 'https://picsum.photos/200/300?random=11', category: 'Science Fiction' },
-  { title: 'Chronicles of the Void', author: 'Luna Vega', price: 14.0, image: 'https://picsum.photos/200/300?random=12', category: 'Fantasy' },
-  { title: 'Dragonfall', author: 'Eldon Sharp', price: 14.75, image: 'https://picsum.photos/200/300?random=13', category: 'Fiction' },
-  { title: 'The Time Alchemist', author: 'Sophie Lane', price: 15.5, image: 'https://picsum.photos/200/300?random=14', category: 'Science Fiction' },
-  { title: 'Neon Realms', author: 'Kai Torres', price: 16.25, image: 'https://picsum.photos/200/300?random=15', category: 'Fantasy' },
-  { title: 'Love Under the Lantern Sky', author: 'Daisy Rose', price: 17.0, image: 'https://picsum.photos/200/300?random=16', category: 'Romance' },
-  { title: 'Hearts in Harmony', author: 'Bennett Grace', price: 17.75, image: 'https://picsum.photos/200/300?random=17', category: 'Romance' },
-  { title: 'A Promise at Dusk', author: 'Mira Shaw', price: 18.5, image: 'https://picsum.photos/200/300?random=18', category: 'Historical Fiction' },
-  { title: 'Unlocking Your Inner Drive', author: 'Dr. K. Mehta', price: 19.25, image: 'https://picsum.photos/200/300?random=19', category: 'Non-Fiction' },
-  { title: 'The Focus Formula', author: 'Terry Bloom', price: 20.0, image: 'https://picsum.photos/200/300?random=20', category: 'Non-Fiction' },
-  { title: 'Empires of the Past', author: 'Richard Langdon', price: 20.75, image: 'https://picsum.photos/200/300?random=21', category: 'Historical Fiction' }
+  
+  // Fantasy
+  { title: 'The Lord of the Rings Set', author: 'J.R.R. Tolkien', price: 4000, image: 'https://m.media-amazon.com/images/I/81MQBzDw6ZL._SL1500_.jpg', category: 'Fantasy' },
+  { title: 'Harry Potter and the Philosopher\'s Stone', author: 'J.K. Rowling', price: 350, image: 'https://m.media-amazon.com/images/I/91-SvQ4I17L._SL1500_.jpg', category: 'Fantasy' },
+  { title: 'Game of Thrones Set', author: 'George R.R. Martin', price: 6000, image: 'https://m.media-amazon.com/images/I/61xlw1p2V2L._SL1080_.jpg', category: 'Fantasy' },
+  
+  
+  // Science Fiction
+  { title: 'Dune Set', author: 'Frank Herbert', price: 5000, image: 'https://m.media-amazon.com/images/I/711wjwwJQYL._SL1500_.jpg', category: 'Science Fiction' },
+  { title: 'Foundation', author: 'Isaac Asimov', price: 480, image: 'https://m.media-amazon.com/images/I/61yavG4+MYS._SL1000_.jpg', category: 'Science Fiction' },
+
+  // Fiction
+  { title: 'To Kill a Mockingbird', author: 'Harper Lee', price: 300, image: 'https://m.media-amazon.com/images/I/81gepf1eMqL._SL1500_.jpg', category: 'Fiction' },
+  { title: '1984', author: 'George Orwell', price: 400, image: 'https://m.media-amazon.com/images/I/81fcLJo+FNL._SL1500_.jpg', category: 'Fiction' },
+  
+  // Mystery
+  { title: 'Gone Girl', author: 'Gillian Flynn', price: 450, image: 'https://m.media-amazon.com/images/I/61Sx28fdUoL._SL1500_.jpg', category: 'Mystery' },
+  { title: 'The Girl with the Dragon Tattoo', author: 'Stieg Larsson', price: 500, image: 'https://m.media-amazon.com/images/I/81YW99XIpJL._SL1500_.jpg', category: 'Mystery' },
+  
+  // Horror
+  { title: 'Dracula', author: 'Bram Stoker', price: 320, image: 'https://m.media-amazon.com/images/I/91bgZLTqz0L._SL1500_.jpg', category: 'Horror' },
+  { title: 'The Exorcist', author: 'William Peter Blatty', price: 420, image: 'https://m.media-amazon.com/images/I/71gnmyiJGnL._SL1500_.jpg', category: 'Horror' }
 ];
 
 // Cart object keyed by title
@@ -105,64 +106,39 @@ function addToCart(title) {
   updateCart();
 }
 
-// Update cart - structured table with quantity update buttons
+// styled cart
 function updateCart() {
-  cartItems.innerHTML = '';
+  const cartContainer = document.getElementById('cart-items');
+  cartContainer.innerHTML = '';
   let total = 0;
 
   if (Object.keys(cart).length === 0) {
-    cartItems.innerHTML = '<p>Your cart is empty.</p>';
-    cartTotal.textContent = '';
+    cartContainer.innerHTML = '<div style="text-align:center; color:#666; padding:40px;"><p>Your cart is empty</p><p>🛍️</p></div>';
+    document.getElementById('cart-total').textContent = '';
     return;
   }
 
-  const table = document.createElement('table');
-  table.style.width = '100%';
-  table.style.borderCollapse = 'collapse';
-
-  // Header
-  const thead = document.createElement('thead');
-  thead.innerHTML = `
-    <tr style="border-bottom: 2px solid #ccc;">
-      <th style="text-align:left; padding: 8px;">Title</th>
-      <th style="text-align:right; padding: 8px;">Price</th>
-      <th style="text-align:center; padding: 8px;">Quantity</th>
-      <th style="text-align:right; padding: 8px;">Total</th>
-      <th style="text-align:center; padding: 8px;">Remove</th>
-    </tr>
-  `;
-  table.appendChild(thead);
-
-  const tbody = document.createElement('tbody');
-
   Object.values(cart).forEach(item => {
     total += item.price * item.qty;
-    const tr = document.createElement('tr');
-    tr.style.borderBottom = '1px solid #ddd';
-
-    const safeId = encodeId(item.title);
-
-    tr.innerHTML = `
-      <td style="padding:8px;">${item.title}</td>
-      <td style="padding:8px; text-align:right;">₹${item.price.toFixed(2)}</td>
-      <td style="padding:8px; text-align:center;">
-        <button onclick="changeCartQty('${item.title}', -1)" style="margin-right:6px;">-</button>
-        <span id="cart-qty-${safeId}">${item.qty}</span>
-        <button onclick="changeCartQty('${item.title}', 1)" style="margin-left:6px;">+</button>
-      </td>
-      <td style="padding:8px; text-align:right;">₹${(item.price * item.qty).toFixed(2)}</td>
-      <td style="padding:8px; text-align:center;">
-        <button onclick="removeFromCart('${item.title}')" style="color:red; font-weight:bold;">×</button>
-      </td>
+    const cartItem = document.createElement('div');
+    cartItem.style.cssText = 'display:flex; align-items:center; padding:15px 0; border-bottom:1px solid #eee;';
+    
+    cartItem.innerHTML = `
+      <div style="flex:1;">
+        <h4 style="margin:0 0 5px; font-size:16px;">${item.title}</h4>
+        <p style="margin:0; color:#666; font-size:14px;">₹${item.price.toFixed(2)} each</p>
+      </div>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <button onclick="changeCartQty('${item.title}', -1)" style="width:30px; height:30px; border:1px solid #ddd; background:white; border-radius:50%; cursor:pointer;">-</button>
+        <span style="min-width:20px; text-align:center; font-weight:600;">${item.qty}</span>
+        <button onclick="changeCartQty('${item.title}', 1)" style="width:30px; height:30px; border:1px solid #ddd; background:white; border-radius:50%; cursor:pointer;">+</button>
+        <button onclick="removeFromCart('${item.title}')" style="margin-left:10px; background:#dc3545; color:white; border:none; width:30px; height:30px; border-radius:50%; cursor:pointer; font-weight:bold;">×</button>
+      </div>
     `;
-
-    tbody.appendChild(tr);
+    cartContainer.appendChild(cartItem);
   });
 
-  table.appendChild(tbody);
-  cartItems.appendChild(table);
-
-  cartTotal.textContent = `Total: ₹${total.toFixed(2)}`;
+  document.getElementById('cart-total').textContent = `₹${total.toFixed(2)}`;
 }
 
 // Change quantity in cart
@@ -187,27 +163,54 @@ function toggleCart() {
   modal.style.display = modal.style.display === 'flex' ? 'none' : 'flex';
 }
 
-// Login modal open/close
+// Login/Signup modal functions
 function openLogin() {
+  closeSignup();
   document.getElementById('login-modal').style.display = 'flex';
 }
+
 function closeLogin() {
   document.getElementById('login-modal').style.display = 'none';
 }
+
 function openSignup() {
   closeLogin();
   document.getElementById('signup-modal').style.display = 'flex';
 }
+
 function closeSignup() {
   document.getElementById('signup-modal').style.display = 'none';
 }
+
+// Form submission handlers
+document.addEventListener('DOMContentLoaded', function() {
+  // Login form handler
+  const loginForm = document.querySelector('#login-modal .auth-form');
+  if (loginForm) {
+    loginForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Login successful!');
+      closeLogin();
+    });
+  }
+
+  // Signup form handler
+  const signupForm = document.querySelector('#signup-modal .auth-form');
+  if (signupForm) {
+    signupForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Account created successfully!');
+      closeSignup();
+    });
+  }
+});
 
 // Dark mode toggle
 function toggleDarkMode() {
   document.body.classList.toggle('dark-mode');
 }
 
-// Page navigation
+// Page navigation functions
 function showWelcome() {
   document.getElementById('welcome-page').style.display = 'block';
   document.getElementById('book-store').style.display = 'none';
@@ -245,6 +248,26 @@ function filterByCategory(category) {
   document.getElementById('category-page').style.display = 'none';
   document.getElementById('contact-page').style.display = 'none';
   displayBooks(filteredBooks);
+}
+
+// Checkout function
+function proceedToCheckout() {
+  if (Object.keys(cart).length === 0) {
+    alert('Your cart is empty! Please add some books before checkout.');
+    return;
+  }
+  
+  // Calculate total
+  const total = Object.values(cart).reduce((sum, item) => sum + (item.price * item.qty), 0);
+  const itemCount = Object.values(cart).reduce((sum, item) => sum + item.qty, 0);
+  
+  // Show order confirmation
+  alert(`🎉 Order Placed Successfully!\n\nItems: ${itemCount} book(s)\nTotal: ₹${total.toFixed(2)}\n\nThank you for shopping with BookBazaar!`);
+  
+  // Clear cart and close modal
+  cart = {};
+  updateCart();
+  toggleCart();
 }
 
 // Initialize app on load
