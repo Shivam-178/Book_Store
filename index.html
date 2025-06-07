@@ -30,28 +30,45 @@
   </section>
 
   <!-- CATEGORY PAGE -->
-  <section id="category-page" style="display: none; padding: 20px; max-width: 700px; margin: 20px auto; background: var(--card); border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-    <h2>Book Categories</h2>
-    <ul id="category-list" style="cursor: pointer;">
-      <li onclick="filterByCategory('Fiction')">Fiction</li>
-      <li onclick="filterByCategory('Non-Fiction')">Non-Fiction</li>
-      <li onclick="filterByCategory('Romance')">Romance</li>
-      <li onclick="filterByCategory('Mystery')">Mystery</li>
-      <li onclick="filterByCategory('Thriller')">Thriller</li>
-      <li onclick="filterByCategory('Science Fiction')">Science Fiction</li>
-      <li onclick="filterByCategory('Fantasy')">Fantasy</li>
-      <li onclick="filterByCategory('Horror')">Horror</li>
-      <li onclick="filterByCategory('Historical Fiction')">Historical Fiction</li>
-      <li onclick="showBookStore()" style="font-weight:bold; margin-top:10px;">Show All Books</li>
-    </ul>
+  <section id="category-page" class="category-section">
+    <div class="category-header">
+      <h2>📚 Book Categories</h2>
+      <p>Explore books by genre</p>
+    </div>
+    <div class="category-grid">
+      <div class="category-card" onclick="filterByCategory('Fiction')">
+        <span class="category-icon">📖</span>
+        <h3>Fiction</h3>
+      </div>
+      <div class="category-card" onclick="filterByCategory('Mystery')">
+        <span class="category-icon">🔍</span>
+        <h3>Mystery</h3>
+      </div>
+      <div class="category-card" onclick="filterByCategory('Science Fiction')">
+        <span class="category-icon">🚀</span>
+        <h3>Science Fiction</h3>
+      </div>
+      <div class="category-card" onclick="filterByCategory('Fantasy')">
+        <span class="category-icon">🧙</span>
+        <h3>Fantasy</h3>
+      </div>
+      <div class="category-card" onclick="filterByCategory('Horror')">
+        <span class="category-icon">👻</span>
+        <h3>Horror</h3>
+      </div>
+      <div class="category-card show-all" onclick="showBookStore()">
+        <span class="category-icon">📚</span>
+        <h3>Show All Books</h3>
+      </div>
+    </div>
   </section>
 
   <!-- CONTACT PAGE -->
   <section id="contact-page" style="display: none; padding: 20px; max-width: 700px; margin: 20px auto; background: var(--card); border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
     <h2>Get in Touch</h2>
-    <p>Email: <a href="mailto:bookbazaar@example.com">bookbazaar@example.com</a></p>
-    <p>Phone: 555-555-5555</p>
-    <p>Address: 123 Main St, Anytown, USA</p>
+    <p>Email: <a href="mailto:bookbazaar@gmail.com">bookbazaar@gmail.com</a></p>
+    <p>Phone: +91 9999009999</p>
+    <p>Address: Galgotias University, Greater Noida, UP, India</p>
     <form onsubmit="alert('Thank you for your message!'); return false;">
       <label for="name">Name:</label><br />
       <input type="text" id="name" name="name" required /><br /><br />
@@ -70,51 +87,82 @@
 
   <!-- CART -->
   <div id="cart-modal" class="modal">
-    <div class="modal-content cart-content">
+    <div class="modal-content cart-modal">
       <span class="close" onclick="toggleCart()">&times;</span>
-      <h2>Your Cart</h2>
-      <div id="cart-items"></div>
-      <p id="cart-total"></p>
+      <div class="cart-header">
+        <h2>🛒 Your Cart</h2>
+      </div>
+      <div id="cart-items" class="cart-items-container"></div>
+      <div class="cart-footer">
+        <p id="cart-total" class="cart-total"></p>
+        <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+      </div>
     </div>
   </div>
 
   <!-- LOGIN -->
   <div id="login-modal" class="modal">
-    <div class="modal-content login-signup">
+    <div class="auth-modal">
       <span class="close" onclick="closeLogin()">&times;</span>
-      <h2>Login</h2>
-      <input type="text" placeholder="Username" />
-      <br />
-      <input type="password" placeholder="Password" />
-      <br />
-      <button>Login</button>
-      <p>
-        Don't have an account? <a href="#" onclick="openSignup()">Sign Up</a>
-      </p>
+      <div class="auth-header">
+        <h2>Welcome Back</h2>
+        <p>Sign in to your account</p>
+      </div>
+      <form class="auth-form">
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" placeholder="Enter your email" required />
+        </div>
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" placeholder="Enter your password" required />
+        </div>
+        <div class="forgot-password">
+          <a href="#" onclick="alert('Password reset link sent to your email!')">Forgot Password?</a>
+        </div>
+        <button type="submit" class="auth-btn">Sign In</button>
+      </form>
+      <div class="auth-footer">
+        <p>Don't have an account? <a href="#" onclick="openSignup()">Sign up</a></p>
+      </div>
     </div>
   </div>
 
   <!-- SIGNUP -->
   <div id="signup-modal" class="modal">
-    <div class="modal-content login-signup">
+    <div class="auth-modal">
       <span class="close" onclick="closeSignup()">&times;</span>
-      <h2>Sign Up</h2>
-      <input type="text" placeholder="Username" />
-      <br />
-      <input type="email" placeholder="Email" />
-      <br />
-      <input type="password" placeholder="Password" />
-      <br />
-      <button>Sign Up</button>
+      <div class="auth-header">
+        <h2>Create Account</h2>
+        <p>Join BookBazaar today</p>
+      </div>
+      <form class="auth-form">
+        <div class="input-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="Enter your full name" required />
+        </div>
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" placeholder="Enter your email" required />
+        </div>
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" placeholder="Create a password" required />
+        </div>
+        <button type="submit" class="auth-btn">Create Account</button>
+      </form>
+      <div class="auth-footer">
+        <p>Already have an account? <a href="#" onclick="openLogin()">Sign in</a></p>
+      </div>
     </div>
   </div>
+
 
   <!-- FOOTER -->
   <footer>
     <p>© 2025 BookBazaar. All rights reserved.</p>
-  </footer>
+  </footer> 
 
   <script src="script.js"></script>
 </body>
 </html>
-
